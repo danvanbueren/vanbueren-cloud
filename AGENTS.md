@@ -140,6 +140,27 @@ Avoid excessively long components, hooks, or files. Split large front-end compon
 
 Use React context where it fits the domain and reduces long prop chains through intermediate components. Keep context values focused and stable; do not introduce context for state that is only used by a narrow parent-child pair.
 
+#### Semicolons
+Do not use optional semicolons ending lines. Leave them off for a cleaner, modern style (e.g., `const value = 1` instead of `const value = 1;`).
+
+#### Component Line Breaks
+Prefer vertical formatting with line breaks to improve readability in JSX/TSX components. Keep tags, attributes, properties (especially `sx` or styling arrays), and closing tags on separate lines rather than collapsed horizontally. For example:
+```jsx
+<Box
+  sx={{
+    borderBottom: '1px solid',
+    borderColor: 'divider',
+    backdropFilter: 'blur(12px)',
+    backgroundColor: 'rgba(18, 18, 18, 0.7)',
+    position: 'sticky',
+    top: 0,
+    zIndex: 1100,
+    py: 2,
+  }}
+>
+```
+
+
 ---
 
 ## Lessons Learned & Core Design Standards

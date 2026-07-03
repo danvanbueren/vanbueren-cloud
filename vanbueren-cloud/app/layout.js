@@ -1,25 +1,26 @@
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
-import EmotionRegistry from './EmotionRegistry';
-import Providers from './providers';
+import '@fontsource/roboto/300.css'
+import '@fontsource/roboto/400.css'
+import '@fontsource/roboto/500.css'
+import '@fontsource/roboto/700.css'
+import EmotionRegistry from './EmotionRegistry'
+import Providers from './providers'
 
 export const metadata = {
-    title: 'Van Bueren - Cloud Dashboard',
-    description: 'Cloud Dashboard',
-};
+  title: 'vanbueren.cloud - Dashboard',
+  description: 'Dashboard',
+}
 
 export default function RootLayout({ children }) {
-    return (
-        <html lang="en">
-            <body>
-                <EmotionRegistry>
-                    <Providers>
-                        {children}
-                    </Providers>
-                </EmotionRegistry>
-            </body>
-        </html>
-    );
+  return (
+    <html lang="en">
+      <body>
+        <EmotionRegistry>
+          <Providers>
+            {children}
+          </Providers>
+        </EmotionRegistry>
+      </body>
+    </html>
+  )
 }
+

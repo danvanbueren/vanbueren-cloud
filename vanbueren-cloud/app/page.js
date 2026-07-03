@@ -1,6 +1,6 @@
-'use client';
+'use client'
 
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import {
   Box,
   Container,
@@ -14,28 +14,28 @@ import {
   Switch,
   Chip,
   Paper,
-} from '@mui/material';
-import CloudIcon from '@mui/icons-material/Cloud';
-import StorageIcon from '@mui/icons-material/Storage';
-import SpeedIcon from '@mui/icons-material/Speed';
-import SettingsIcon from '@mui/icons-material/Settings';
-import TrendingUpIcon from '@mui/icons-material/TrendingUp';
-import DnsIcon from '@mui/icons-material/Dns';
-import AutorenewIcon from '@mui/icons-material/Autorenew';
+} from '@mui/material'
+import CloudIcon from '@mui/icons-material/Cloud'
+import StorageIcon from '@mui/icons-material/Storage'
+import SpeedIcon from '@mui/icons-material/Speed'
+import SettingsIcon from '@mui/icons-material/Settings'
+import TrendingUpIcon from '@mui/icons-material/TrendingUp'
+import DnsIcon from '@mui/icons-material/Dns'
+import AutorenewIcon from '@mui/icons-material/Autorenew'
 
 export default function Home() {
-  const [serverLoad, setServerLoad] = useState(45);
-  const [isLiveMonitoring, setIsLiveMonitoring] = useState(true);
+  const [serverLoad, setServerLoad] = useState(45)
+  const [isLiveMonitoring, setIsLiveMonitoring] = useState(true)
 
   const handleSliderChange = (event, newValue) => {
-    setServerLoad(newValue);
-  };
+    setServerLoad(newValue)
+  }
 
   const getLoadColor = (load) => {
-    if (load < 50) return 'primary.main';      // Standard Primary Blue
-    if (load < 80) return 'warning.main';      // Standard Warning Yellow
-    return 'error.main';                       // Standard Error Red
-  };
+    if (load < 50) return 'primary.main'
+    if (load < 80) return 'warning.main'
+    return 'error.main'
+  }
 
   return (
     <Box
@@ -60,10 +60,30 @@ export default function Home() {
           py: 2,
         }}
       >
-        <Container maxWidth="lg">
-          <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-              <CloudIcon sx={{ fontSize: '2rem', color: 'primary.main', filter: 'drop-shadow(0 0 8px rgba(144, 202, 249, 0.4))' }} />
+        <Container
+          maxWidth="lg"
+        >
+          <Box
+            sx={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+            }}
+          >
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 1,
+              }}
+            >
+              <CloudIcon
+                sx={{
+                  fontSize: '2rem',
+                  color: 'primary.main',
+                  filter: 'drop-shadow(0 0 8px rgba(144, 202, 249, 0.4))',
+                }}
+              />
               <Typography
                 variant="h6"
                 sx={{
@@ -78,7 +98,13 @@ export default function Home() {
               </Typography>
             </Box>
             
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 2,
+              }}
+            >
               <Chip
                 label={isLiveMonitoring ? "LIVE UPDATING" : "MONITORING PAUSED"}
                 size="small"
@@ -87,10 +113,16 @@ export default function Home() {
                   fontWeight: 600,
                   fontSize: '0.75rem',
                   height: 24,
-                  '& .MuiChip-label': { px: 1 },
+                  '& .MuiChip-label': {
+                    px: 1,
+                  },
                 }}
               />
-              <IconButton sx={{ color: 'text.secondary' }}>
+              <IconButton
+                sx={{
+                  color: 'text.secondary',
+                }}
+              >
                 <SettingsIcon />
               </IconButton>
             </Box>
@@ -99,8 +131,18 @@ export default function Home() {
       </Box>
 
       {/* Hero Header */}
-      <Container maxWidth="lg" sx={{ mt: 8 }}>
-        <Box sx={{ textAlign: 'center', mb: 6 }}>
+      <Container
+        maxWidth="lg"
+        sx={{
+          mt: 8,
+        }}
+      >
+        <Box
+          sx={{
+            textAlign: 'center',
+            mb: 6,
+          }}
+        >
           <Typography
             variant="h1"
             sx={{
@@ -113,35 +155,99 @@ export default function Home() {
           >
             Next-Gen Cloud Orchestration
           </Typography>
-          <Typography variant="body1" sx={{ color: 'text.secondary', maxWidth: '600px', mx: 'auto', mb: 4 }}>
+          <Typography
+            variant="body1"
+            sx={{
+              color: 'text.secondary',
+              maxWidth: '600px',
+              mx: 'auto',
+              mb: 4,
+            }}
+          >
             Monitor and scale your virtual instances, serverless functions, and globally distributed databases from a single unified portal.
           </Typography>
-          <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2 }}>
-            <Button variant="contained" color="primary" size="large">
+          <Box
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              gap: 2,
+            }}
+          >
+            <Button
+              variant="contained"
+              color="primary"
+              size="large"
+            >
               Launch Console
             </Button>
-            <Button variant="outlined" color="secondary" size="large">
+            <Button
+              variant="outlined"
+              color="secondary"
+              size="large"
+            >
               Read API Docs
             </Button>
           </Box>
         </Box>
 
         {/* Dashboard Grid */}
-        <Grid container spacing={4} sx={{ mt: 4 }}>
+        <Grid
+          container
+          spacing={4}
+          sx={{
+            mt: 4,
+          }}
+        >
           {/* Card 1: Server Load Controls */}
-          <Grid size={{ xs: 12, md: 4 }}>
-            <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-              <CardContent sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', gap: 3 }}>
-                <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <Typography variant="h6" sx={{ fontWeight: 700 }}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 4,
+            }}
+          >
+            <Card
+              sx={{
+                height: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+              }}
+            >
+              <CardContent
+                sx={{
+                  flexGrow: 1,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: 3,
+                }}
+              >
+                <Box
+                  sx={{
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                  }}
+                >
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontWeight: 700,
+                    }}
+                  >
                     Load Simulator
                   </Typography>
-                  <IconButton color="primary">
+                  <IconButton
+                    color="primary"
+                  >
                     <AutorenewIcon />
                   </IconButton>
                 </Box>
                 
-                <Box sx={{ my: 'auto', textAlign: 'center' }}>
+                <Box
+                  sx={{
+                    my: 'auto',
+                    textAlign: 'center',
+                  }}
+                >
                   <Typography
                     variant="h2"
                     sx={{
@@ -152,13 +258,30 @@ export default function Home() {
                   >
                     {serverLoad}%
                   </Typography>
-                  <Typography variant="caption" sx={{ color: 'text.secondary' }}>
+                  <Typography
+                    variant="caption"
+                    sx={{
+                      color: 'text.secondary',
+                    }}
+                  >
                     Simulated Active Cluster CPU
                   </Typography>
                 </Box>
 
-                <Box sx={{ px: 1 }}>
-                  <Typography variant="body2" sx={{ mb: 1, color: 'text.secondary', display: 'flex', justifyContent: 'space-between' }}>
+                <Box
+                  sx={{
+                    px: 1,
+                  }}
+                >
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      mb: 1,
+                      color: 'text.secondary',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                    }}
+                  >
                     <span>Adjust Load Level</span>
                     <span>{serverLoad < 50 ? "Normal" : serverLoad < 80 ? "Elevated" : "Critical"}</span>
                   </Typography>
@@ -177,66 +300,239 @@ export default function Home() {
           </Grid>
 
           {/* Card 2: System Architecture */}
-          <Grid size={{ xs: 12, md: 8 }}>
-            <Card sx={{ height: '100%' }}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 8,
+            }}
+          >
+            <Card
+              sx={{
+                height: '100%',
+              }}
+            >
               <CardContent>
-                <Typography variant="h6" sx={{ fontWeight: 700, mb: 3 }}>
+                <Typography
+                  variant="h6"
+                  sx={{
+                    fontWeight: 700,
+                    mb: 3,
+                  }}
+                >
                   Cluster Core Metrics
                 </Typography>
                 
-                <Grid container spacing={3}>
-                  <Grid size={{ xs: 12, sm: 4 }}>
-                    <Paper sx={{ p: 3, display: 'flex', flexDirection: 'column', gap: 1 }}>
-                      <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                        <StorageIcon sx={{ color: 'primary.main' }} />
-                        <Typography variant="subtitle2" sx={{ color: 'text.secondary', fontWeight: 600 }}>Memory</Typography>
+                <Grid
+                  container
+                  spacing={3}
+                >
+                  <Grid
+                    size={{
+                      xs: 12,
+                      sm: 4,
+                    }}
+                  >
+                    <Paper
+                      sx={{
+                        p: 3,
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: 1,
+                      }}
+                    >
+                      <Box
+                        sx={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: 1,
+                        }}
+                      >
+                        <StorageIcon
+                          sx={{
+                            color: 'primary.main',
+                          }}
+                        />
+                        <Typography
+                          variant="subtitle2"
+                          sx={{
+                            color: 'text.secondary',
+                            fontWeight: 600,
+                          }}
+                        >
+                          Memory
+                        </Typography>
                       </Box>
-                      <Typography variant="h4" sx={{ fontWeight: 800 }}>
+                      <Typography
+                        variant="h4"
+                        sx={{
+                          fontWeight: 800,
+                        }}
+                      >
                         {((serverLoad * 0.12) + 4.2).toFixed(1)} GB
                       </Typography>
-                      <Typography variant="caption" sx={{ color: 'primary.main' }}>
+                      <Typography
+                        variant="caption"
+                        sx={{
+                          color: 'primary.main',
+                        }}
+                      >
                         of 16.0 GB total
                       </Typography>
                     </Paper>
                   </Grid>
 
-                  <Grid size={{ xs: 12, sm: 4 }}>
-                    <Paper sx={{ p: 3, display: 'flex', flexDirection: 'column', gap: 1 }}>
-                      <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                        <SpeedIcon sx={{ color: 'secondary.main' }} />
-                        <Typography variant="subtitle2" sx={{ color: 'text.secondary', fontWeight: 600 }}>Network</Typography>
+                  <Grid
+                    size={{
+                      xs: 12,
+                      sm: 4,
+                    }}
+                  >
+                    <Paper
+                      sx={{
+                        p: 3,
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: 1,
+                      }}
+                    >
+                      <Box
+                        sx={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: 1,
+                        }}
+                      >
+                        <SpeedIcon
+                          sx={{
+                            color: 'secondary.main',
+                          }}
+                        />
+                        <Typography
+                          variant="subtitle2"
+                          sx={{
+                            color: 'text.secondary',
+                            fontWeight: 600,
+                          }}
+                        >
+                          Network
+                        </Typography>
                       </Box>
-                      <Typography variant="h4" sx={{ fontWeight: 800 }}>
+                      <Typography
+                        variant="h4"
+                        sx={{
+                          fontWeight: 800,
+                        }}
+                      >
                         {((serverLoad * 4.8) + 120).toFixed(0)} Mbps
                       </Typography>
-                      <Typography variant="caption" sx={{ color: 'secondary.main' }}>
+                      <Typography
+                        variant="caption"
+                        sx={{
+                          color: 'secondary.main',
+                        }}
+                      >
                         Inbound bandwidth
                       </Typography>
                     </Paper>
                   </Grid>
 
-                  <Grid size={{ xs: 12, sm: 4 }}>
-                    <Paper sx={{ p: 3, display: 'flex', flexDirection: 'column', gap: 1 }}>
-                      <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                        <DnsIcon sx={{ color: 'success.main' }} />
-                        <Typography variant="subtitle2" sx={{ color: 'text.secondary', fontWeight: 600 }}>Active Nodes</Typography>
+                  <Grid
+                    size={{
+                      xs: 12,
+                      sm: 4,
+                    }}
+                  >
+                    <Paper
+                      sx={{
+                        p: 3,
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: 1,
+                      }}
+                    >
+                      <Box
+                        sx={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: 1,
+                        }}
+                      >
+                        <DnsIcon
+                          sx={{
+                            color: 'success.main',
+                          }}
+                        />
+                        <Typography
+                          variant="subtitle2"
+                          sx={{
+                            color: 'text.secondary',
+                            fontWeight: 600,
+                          }}
+                        >
+                          Active Nodes
+                        </Typography>
                       </Box>
-                      <Typography variant="h4" sx={{ fontWeight: 800 }}>
+                      <Typography
+                        variant="h4"
+                        sx={{
+                          fontWeight: 800,
+                        }}
+                      >
                         {serverLoad > 80 ? "12 / 12" : serverLoad > 50 ? "8 / 12" : "4 / 12"}
                       </Typography>
-                      <Typography variant="caption" sx={{ color: 'success.main' }}>
+                      <Typography
+                        variant="caption"
+                        sx={{
+                          color: 'success.main',
+                        }}
+                      >
                         Nodes online
                       </Typography>
                     </Paper>
                   </Grid>
                 </Grid>
 
-                <Box sx={{ mt: 4, display: 'flex', alignItems: 'center', justifyContent: 'space-between', p: 2, borderRadius: 2, border: '1px dashed', borderColor: 'divider' }}>
-                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-                    <TrendingUpIcon sx={{ color: 'primary.main' }} />
+                <Box
+                  sx={{
+                    mt: 4,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    p: 2,
+                    borderRadius: 2,
+                    border: '1px dashed',
+                    borderColor: 'divider',
+                  }}
+                >
+                  <Box
+                    sx={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 2,
+                    }}
+                  >
+                    <TrendingUpIcon
+                      sx={{
+                        color: 'primary.main',
+                      }}
+                    />
                     <Box>
-                      <Typography variant="body2" sx={{ fontWeight: 600 }}>Auto-Scaling</Typography>
-                      <Typography variant="caption" sx={{ color: 'text.secondary' }}>Automatically provision new node clusters at 80% CPU threshold</Typography>
+                      <Typography
+                        variant="body2"
+                        sx={{
+                          fontWeight: 600,
+                        }}
+                      >
+                        Auto-Scaling
+                      </Typography>
+                      <Typography
+                        variant="caption"
+                        sx={{
+                          color: 'text.secondary',
+                        }}
+                      >
+                        Automatically provision new node clusters at 80% CPU threshold
+                      </Typography>
                     </Box>
                   </Box>
                   <Switch
@@ -251,5 +547,5 @@ export default function Home() {
         </Grid>
       </Container>
     </Box>
-  );
+  )
 }
