@@ -8,12 +8,17 @@ import {
   Grid,
   Card,
   CardContent,
-  Link,
+  Button,
 } from '@mui/material'
 import CloudIcon from '@mui/icons-material/Cloud'
 import LaunchIcon from '@mui/icons-material/Launch'
+import DashboardIcon from '@mui/icons-material/Dashboard'
+import FlightIcon from '@mui/icons-material/Flight'
+import MusicNoteIcon from '@mui/icons-material/MusicNote'
+import ConstructionIcon from '@mui/icons-material/Construction'
 import GitHubIcon from '@mui/icons-material/GitHub'
-import LanguageIcon from '@mui/icons-material/Language'
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
+import LocalCafeIcon from '@mui/icons-material/LocalCafe'
 
 export default function Home() {
   return (
@@ -96,7 +101,7 @@ export default function Home() {
                   variant="h6"
                   sx={{
                     fontWeight: 700,
-                    mb: 3,
+                    mb: 4,
                   }}
                 >
                   Internal Links
@@ -105,49 +110,218 @@ export default function Home() {
                   sx={{
                     display: 'flex',
                     flexDirection: 'column',
-                    gap: 2.5,
+                    gap: 3,
                   }}
                 >
-                  <Link
-                    href="/"
-                    underline="hover"
-                    sx={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: 1.5,
-                      color: 'primary.main',
-                      fontWeight: 500,
-                      alignSelf: 'flex-start',
-                    }}
-                  >
-                    <CloudIcon
+                  {/* Dashboard */}
+                  <Box>
+                    <Typography
+                      variant="caption"
                       sx={{
-                        fontSize: '1.3rem',
+                        color: 'text.secondary',
+                        fontWeight: 600,
+                        display: 'block',
+                        mb: 1,
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.05em',
                       }}
-                    />
-                    Home (Root)
-                  </Link>
-                  <Link
-                    href="https://airspace-sim.vanbueren.cloud/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    underline="hover"
-                    sx={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: 1.5,
-                      color: 'primary.main',
-                      fontWeight: 500,
-                      alignSelf: 'flex-start',
-                    }}
-                  >
-                    <LaunchIcon
+                    >
+                      Dashboard
+                    </Typography>
+                    <Button
+                      variant="outlined"
+                      href="/"
+                      startIcon={
+                        <DashboardIcon />
+                      }
+                      endIcon={
+                        <LaunchIcon />
+                      }
                       sx={{
-                        fontSize: '1.3rem',
+                        justifyContent: 'flex-start',
+                        textTransform: 'none',
+                        width: '100%',
+                        py: 1.5,
+                        px: 2,
+                        borderColor: 'divider',
+                        color: 'text.primary',
+                        fontWeight: 500,
+                        '&:hover': {
+                          borderColor: 'primary.main',
+                          backgroundColor: 'rgba(144, 202, 249, 0.08)',
+                        },
+                        '& .MuiButton-startIcon': {
+                          color: 'primary.main',
+                          mr: 1.5,
+                        },
+                        '& .MuiButton-endIcon': {
+                          color: 'text.secondary',
+                          marginLeft: 'auto',
+                        },
                       }}
-                    />
-                    Airspace Sim
-                  </Link>
+                    >
+                      vanbueren.cloud
+                    </Button>
+                  </Box>
+
+                  {/* Airspace Sim */}
+                  <Box>
+                    <Typography
+                      variant="caption"
+                      sx={{
+                        color: 'text.secondary',
+                        fontWeight: 600,
+                        display: 'block',
+                        mb: 1,
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.05em',
+                      }}
+                    >
+                      airspace-sim
+                    </Typography>
+                    <Button
+                      variant="outlined"
+                      href="https://airspace-sim.vanbueren.cloud/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      startIcon={
+                        <FlightIcon />
+                      }
+                      endIcon={
+                        <LaunchIcon />
+                      }
+                      sx={{
+                        justifyContent: 'flex-start',
+                        textTransform: 'none',
+                        width: '100%',
+                        py: 1.5,
+                        px: 2,
+                        borderColor: 'divider',
+                        color: 'text.primary',
+                        fontWeight: 500,
+                        '&:hover': {
+                          borderColor: 'primary.main',
+                          backgroundColor: 'rgba(144, 202, 249, 0.08)',
+                        },
+                        '& .MuiButton-startIcon': {
+                          color: 'primary.main',
+                          mr: 1.5,
+                        },
+                        '& .MuiButton-endIcon': {
+                          color: 'text.secondary',
+                          marginLeft: 'auto',
+                        },
+                      }}
+                    >
+                      airspace-sim.vanbueren.cloud
+                    </Button>
+                  </Box>
+
+                  {/* Tracklink */}
+                  <Box>
+                    <Typography
+                      variant="caption"
+                      sx={{
+                        color: 'text.secondary',
+                        fontWeight: 600,
+                        display: 'block',
+                        mb: 1,
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.05em',
+                      }}
+                    >
+                      Tracklink
+                    </Typography>
+                    <Button
+                      variant="outlined"
+                      href="https://tracklink.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      startIcon={
+                        <MusicNoteIcon />
+                      }
+                      endIcon={
+                        <LaunchIcon />
+                      }
+                      sx={{
+                        justifyContent: 'flex-start',
+                        textTransform: 'none',
+                        width: '100%',
+                        py: 1.5,
+                        px: 2,
+                        borderColor: 'divider',
+                        color: 'text.primary',
+                        fontWeight: 500,
+                        '&:hover': {
+                          borderColor: 'primary.main',
+                          backgroundColor: 'rgba(144, 202, 249, 0.08)',
+                        },
+                        '& .MuiButton-startIcon': {
+                          color: 'primary.main',
+                          mr: 1.5,
+                        },
+                        '& .MuiButton-endIcon': {
+                          color: 'text.secondary',
+                          marginLeft: 'auto',
+                        },
+                      }}
+                    >
+                      tracklink.app
+                    </Button>
+                  </Box>
+
+                  {/* Gasket Case */}
+                  <Box>
+                    <Typography
+                      variant="caption"
+                      sx={{
+                        color: 'text.secondary',
+                        fontWeight: 600,
+                        display: 'block',
+                        mb: 1,
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.05em',
+                      }}
+                    >
+                      Gasket Case
+                    </Typography>
+                    <Button
+                      variant="outlined"
+                      href="https://gasketcase.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      startIcon={
+                        <ConstructionIcon />
+                      }
+                      endIcon={
+                        <LaunchIcon />
+                      }
+                      sx={{
+                        justifyContent: 'flex-start',
+                        textTransform: 'none',
+                        width: '100%',
+                        py: 1.5,
+                        px: 2,
+                        borderColor: 'divider',
+                        color: 'text.primary',
+                        fontWeight: 500,
+                        '&:hover': {
+                          borderColor: 'primary.main',
+                          backgroundColor: 'rgba(144, 202, 249, 0.08)',
+                        },
+                        '& .MuiButton-startIcon': {
+                          color: 'primary.main',
+                          mr: 1.5,
+                        },
+                        '& .MuiButton-endIcon': {
+                          color: 'text.secondary',
+                          marginLeft: 'auto',
+                        },
+                      }}
+                    >
+                      gasketcase.app
+                    </Button>
+                  </Box>
                 </Box>
               </CardContent>
             </Card>
@@ -170,7 +344,7 @@ export default function Home() {
                   variant="h6"
                   sx={{
                     fontWeight: 700,
-                    mb: 3,
+                    mb: 4,
                   }}
                 >
                   External Links
@@ -179,72 +353,167 @@ export default function Home() {
                   sx={{
                     display: 'flex',
                     flexDirection: 'column',
-                    gap: 2.5,
+                    gap: 3,
                   }}
                 >
-                  <Link
-                    href="https://github.com/danvanbueren"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    underline="hover"
-                    sx={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: 1.5,
-                      color: 'primary.main',
-                      fontWeight: 500,
-                      alignSelf: 'flex-start',
-                    }}
-                  >
-                    <GitHubIcon
+                  {/* Planning & Development */}
+                  <Box>
+                    <Typography
+                      variant="caption"
                       sx={{
-                        fontSize: '1.3rem',
+                        color: 'text.secondary',
+                        fontWeight: 600,
+                        display: 'block',
+                        mb: 1,
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.05em',
                       }}
-                    />
-                    GitHub Profile
-                  </Link>
-                  <Link
-                    href="https://ko-fi.com/danvanbueren"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    underline="hover"
-                    sx={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: 1.5,
-                      color: 'primary.main',
-                      fontWeight: 500,
-                      alignSelf: 'flex-start',
-                    }}
-                  >
-                    <LanguageIcon
+                    >
+                      Planning & Development
+                    </Typography>
+                    <Button
+                      variant="outlined"
+                      href="https://github.com/danvanbueren"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      startIcon={
+                        <GitHubIcon />
+                      }
+                      endIcon={
+                        <LaunchIcon />
+                      }
                       sx={{
-                        fontSize: '1.3rem',
+                        justifyContent: 'flex-start',
+                        textTransform: 'none',
+                        width: '100%',
+                        py: 1.5,
+                        px: 2,
+                        borderColor: 'divider',
+                        color: 'text.primary',
+                        fontWeight: 500,
+                        '&:hover': {
+                          borderColor: 'primary.main',
+                          backgroundColor: 'rgba(144, 202, 249, 0.08)',
+                        },
+                        '& .MuiButton-startIcon': {
+                          color: 'primary.main',
+                          mr: 1.5,
+                        },
+                        '& .MuiButton-endIcon': {
+                          color: 'text.secondary',
+                          marginLeft: 'auto',
+                        },
                       }}
-                    />
-                    Ko-fi
-                  </Link>
-                  <Link
-                    href="https://www.linkedin.com/in/danvanbueren/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    underline="hover"
-                    sx={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: 1.5,
-                      color: 'primary.main',
-                      fontWeight: 500,
-                      alignSelf: 'flex-start',
-                    }}
-                  >
-                    <LaunchIcon
+                    >
+                      /danvanbueren
+                    </Button>
+                  </Box>
+
+                  {/* Professional Network */}
+                  <Box>
+                    <Typography
+                      variant="caption"
                       sx={{
-                        fontSize: '1.3rem',
+                        color: 'text.secondary',
+                        fontWeight: 600,
+                        display: 'block',
+                        mb: 1,
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.05em',
                       }}
-                    />
-                    LinkedIn
-                  </Link>
+                    >
+                      Professional Network
+                    </Typography>
+                    <Button
+                      variant="outlined"
+                      href="https://www.linkedin.com/in/danvanbueren/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      startIcon={
+                        <LinkedInIcon />
+                      }
+                      endIcon={
+                        <LaunchIcon />
+                      }
+                      sx={{
+                        justifyContent: 'flex-start',
+                        textTransform: 'none',
+                        width: '100%',
+                        py: 1.5,
+                        px: 2,
+                        borderColor: 'divider',
+                        color: 'text.primary',
+                        fontWeight: 500,
+                        '&:hover': {
+                          borderColor: 'primary.main',
+                          backgroundColor: 'rgba(144, 202, 249, 0.08)',
+                        },
+                        '& .MuiButton-startIcon': {
+                          color: 'primary.main',
+                          mr: 1.5,
+                        },
+                        '& .MuiButton-endIcon': {
+                          color: 'text.secondary',
+                          marginLeft: 'auto',
+                        },
+                      }}
+                    >
+                      /in/danvanbueren
+                    </Button>
+                  </Box>
+
+                  {/* Support Me */}
+                  <Box>
+                    <Typography
+                      variant="caption"
+                      sx={{
+                        color: 'text.secondary',
+                        fontWeight: 600,
+                        display: 'block',
+                        mb: 1,
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.05em',
+                      }}
+                    >
+                      Support Me
+                    </Typography>
+                    <Button
+                      variant="outlined"
+                      href="https://ko-fi.com/danvanbueren"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      startIcon={
+                        <LocalCafeIcon />
+                      }
+                      endIcon={
+                        <LaunchIcon />
+                      }
+                      sx={{
+                        justifyContent: 'flex-start',
+                        textTransform: 'none',
+                        width: '100%',
+                        py: 1.5,
+                        px: 2,
+                        borderColor: 'divider',
+                        color: 'text.primary',
+                        fontWeight: 500,
+                        '&:hover': {
+                          borderColor: 'primary.main',
+                          backgroundColor: 'rgba(144, 202, 249, 0.08)',
+                        },
+                        '& .MuiButton-startIcon': {
+                          color: 'primary.main',
+                          mr: 1.5,
+                        },
+                        '& .MuiButton-endIcon': {
+                          color: 'text.secondary',
+                          marginLeft: 'auto',
+                        },
+                      }}
+                    >
+                      /danvanbueren
+                    </Button>
+                  </Box>
                 </Box>
               </CardContent>
             </Card>
