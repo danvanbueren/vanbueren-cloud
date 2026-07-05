@@ -14,6 +14,7 @@ import CloudIcon from '@mui/icons-material/Cloud'
 import LaunchIcon from '@mui/icons-material/Launch'
 import HomeIcon from '@mui/icons-material/Home'
 import CheckIcon from '@mui/icons-material/Check'
+import SavingsIcon from '@mui/icons-material/Savings'
 import FlightIcon from '@mui/icons-material/Flight'
 import MusicNoteIcon from '@mui/icons-material/MusicNote'
 import ConstructionIcon from '@mui/icons-material/Construction'
@@ -320,6 +321,59 @@ export default function Home() {
                       }}
                     >
                       gasketcase.app
+                    </Button>
+                  </Box>
+
+                  {/* Retirement Calculator */}
+                  <Box>
+                    <Typography
+                      variant="caption"
+                      sx={{
+                        color: 'text.secondary',
+                        fontWeight: 600,
+                        display: 'block',
+                        mb: 1,
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.05em',
+                      }}
+                    >
+                      Retirement Calculator
+                    </Typography>
+                    <Button
+                      variant="outlined"
+                      href="https://retirement.vanbueren.cloud/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      startIcon={
+                        <SavingsIcon />
+                      }
+                      endIcon={
+                        <LaunchIcon />
+                      }
+                      sx={{
+                        justifyContent: 'flex-start',
+                        textTransform: 'none',
+                        width: '100%',
+                        py: 1.5,
+                        px: 2,
+                        borderColor: 'divider',
+                        color: 'text.primary',
+                        fontWeight: 500,
+                        '&:hover': {
+                          borderColor: 'primary.main',
+                          backgroundColor: 'rgba(144, 202, 249, 0.08)',
+                        },
+                        '& .MuiButton-startIcon': {
+                          color: 'primary.main',
+                          mr: 1.5,
+                        },
+                        '& .MuiButton-endIcon': {
+                          color: 'text.secondary',
+                          marginLeft: 'auto',
+                        },
+                      }}
+                    >
+                      retirement.vanbueren.cloud
                     </Button>
                   </Box>
                 </Box>
