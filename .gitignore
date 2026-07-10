@@ -31,3 +31,6 @@ venv/
 __pycache__
 .next/
 node_modules/
+
+# Allow favicon/icon assets in the public/icon directory
+!vanbueren-cloud/public/icon/
