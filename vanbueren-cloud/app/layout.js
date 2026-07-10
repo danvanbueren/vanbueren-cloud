@@ -1,3 +1,4 @@
+import packageJson from '../package.json'
 import '@fontsource/roboto/300.css'
 import '@fontsource/roboto/400.css'
 import '@fontsource/roboto/500.css'
@@ -5,9 +6,14 @@ import '@fontsource/roboto/700.css'
 import EmotionRegistry from './EmotionRegistry'
 import Providers from './providers'
 
+const PROJECT_NAME = packageJson.name
+  .split('-')
+  .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+  .join(' ')
+
 export const metadata = {
-  title: 'vanbueren.cloud - Dashboard',
-  description: 'Dashboard',
+  title: PROJECT_NAME,
+  description: `${PROJECT_NAME} - A simple quick-access link tree directing visitors to subdomains and external services hosted under the vanbueren.cloud domain.`,
   icons: {
     icon: [
       { url: '/icon/icon0.svg', type: 'image/svg+xml' },
@@ -18,7 +24,7 @@ export const metadata = {
   },
   manifest: '/icon/manifest.json',
   appleWebApp: {
-    title: 'vanbueren.cloud',
+    title: PROJECT_NAME,
   },
 }
 
