@@ -34,3 +34,8 @@ node_modules/
 
 # Allow favicon/icon assets in the public/icon directory
 !vanbueren-cloud/public/icon/
+
+# Bun
+.bun
+bun-debug.log*
+bun-error.log*
