@@ -18,11 +18,11 @@ To run the application locally:
    ```
 2. Install the dependencies:
    ```bash
-   npm install
+   bun install
    ```
 3. Start the local development server:
    ```bash
-   npm run dev
+   bun run dev
    ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
